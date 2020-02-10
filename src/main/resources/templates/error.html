@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="main__container">
+    <div class="error__content__container">
+        <img class="error__image" th:src="@{/error.svg}" alt="error">
+        <h1 class="page__not__found__title"  th:text="${error_message}"></h1>
+        <p class="error__code"  th:text="${error}"></p>
+    </div>
+</div>
+</body>
+<style>
+    .main__container{
+    background-color: #f8f8f8;
+    height: fit-content;
+    padding: 100px;
+}
+.error__content__container{
+    max-width: 777px;
+    margin: 0 auto;
+}
+.error__image{
+    height: fit-content;
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+}
+.page__not__found__title{
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    max-width: max-content;
+    margin: 0.8em auto auto auto;
+    text-align: center;
+}
+.error__code{
+    margin-top: .8em;
+    color: #e20000;
+    font-weight: 200;
+    font-family: 'Lato', sans-serif;
+    width: max-content;
+    margin: 0.8em auto auto auto;
+}
+.help__description{
+    font-family: 'Lato', sans-serif;
+    margin-top: .5em;
+    height: 3em;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    color: #041333;
+}
+
+@media only screen and (max-device-width: 768px) {
+    .page__not__found__title{
+        font-size: 22px;
+    }
+    .main__container{
+        background-color: #f8f8f8;
+        height: fit-content;
+        padding: 50px;
+    }
+}
+</style>
+</html>
