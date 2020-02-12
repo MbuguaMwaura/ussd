@@ -20,6 +20,7 @@ public class UssdController {
             response = "CON Choose account information you want to view \n";
             response += "1. Account number \n";
             response += "2. Account balance";
+            response += "3. https://www.imbank.com";
 
         }else if (text.equals("2")) {
             // Business logic for first level response
